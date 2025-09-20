@@ -23,6 +23,5 @@ fn main() {
     class1.lowest_score().unwrap().display();
     print!("student count: {}\n", class1.student_cont());
 
-    // ここから編集しました
-    print!("Hello World")
+    // ここから編集しようとしました
 }
