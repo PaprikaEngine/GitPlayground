@@ -1,3 +1,15 @@
+mod student;
+use crate::student::Student;
+
 fn main() {
-    println!("Hello, world!");
+    let tanaka = Student::new(
+        "Tanaka".to_string(),
+        1,
+        13,
+        20,
+        100,
+        43,
+        32
+    );
+    tanaka.display();
 }
