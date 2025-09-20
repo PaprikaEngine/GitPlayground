@@ -1,12 +1,12 @@
 #[derive(Debug, Clone)]
 pub struct Student {
-    name: String,
-    id: u16,
-    japanese: u16,
-    math: u16,
-    english: u16,
-    science: u16,
-    social: u16,
+    pub name: String,
+    pub id: u16,
+    pub japanese: u16,
+    pub math: u16,
+    pub english: u16,
+    pub science: u16,
+    pub social: u16,
 }
 
 impl Student {
@@ -22,11 +22,11 @@ impl Student {
         }
     }
 
-    fn total_score(&self) -> u16 {
+    pub fn total_score(&self) -> u16 {
         self.japanese + self.math + self.english + self.science + self.social
     }
 
-    fn average_score(&self) -> f32 {
+    pub fn average_score(&self) -> f32 {
         self.total_score() as f32 / 5.0
     }
 
