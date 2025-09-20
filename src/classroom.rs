@@ -26,15 +26,14 @@ impl Classroom {
         self.students.len()
     }
 
-    pub fn suject_average(&self) -> (f64, f64, f64, f64, f64) {
+    pub fn suject_average(&self) -> (f64, f64, f64, f64) {
         if self.students.is_empty() {
-            return (0.0, 0.0, 0.0, 0.0, 0.0);
+            return (0.0, 0.0, 0.0, 0.0);
         }
         let total_japanese: u32 = self.students.iter().map(|s| s.japanese as u32).sum();
         let total_math: u32 = self.students.iter().map(|s| s.math as u32).sum();
         let total_english: u32 = self.students.iter().map(|s| s.english as u32).sum();
         let total_science: u32 = self.students.iter().map(|s| s.science as u32).sum();
-        let total_social: u32 = self.students.iter().map(|s| s.social as u32).sum();
 
         let count = self.students.len() as u32;
 
@@ -43,7 +42,6 @@ impl Classroom {
             total_math as f64 / count as f64,
             total_english as f64 / count as f64,
             total_science as f64 / count as f64,
-            total_social as f64 / count as f64,
         )
     }
     pub fn highest_score(&self) -> Option<&Student> {
