@@ -9,7 +9,6 @@ fn main() {
         20,
         100,
         43,
-        32
     );
     tanaka.display();
 }
