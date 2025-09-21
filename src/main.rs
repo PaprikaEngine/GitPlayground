@@ -22,4 +22,6 @@ fn main() {
     class1.highest_score().unwrap().display();
     class1.lowest_score().unwrap().display();
     print!("student count: {}\n", class1.student_cont());
+
+    // ここから編集しようとしました
 }
